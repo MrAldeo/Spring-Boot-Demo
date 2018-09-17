@@ -8,4 +8,13 @@ import org.springframework.stereotype.Repository;
 //Dao注解
 @Repository
 public class UserDao {
+    public void tranSationTest() throws Exception {
+        System.out.println("事物1");
+        throw new Exception("方法执行错误");
+
+    }
+
+    public void tranSationTest2(){
+        System.out.println("事物2");
+    }
 }

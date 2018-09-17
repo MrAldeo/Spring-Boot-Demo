@@ -16,7 +16,7 @@ public class DemoApplicationTests {
 
 	@Test   //加test注解
 	public void getUserInfo() {
-		System.out.println(userService.getUserInfo());
+//		System.out.println(userService.getUserInfo());
 	}
 
 }
