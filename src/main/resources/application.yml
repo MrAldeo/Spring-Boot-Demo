@@ -1,0 +1,15 @@
+server:
+  port: 8002
+
+spring:
+  profiles:
+    active: dev
+  application:
+     name: ZijiezDemo
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+
