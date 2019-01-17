@@ -28,7 +28,7 @@ public class ProducerService {
         rabbitTemplate.convertAndSend("ZZJ_QUEUE",paramItem.toString());
     }
 
-    //消息发送者-没有使用exchange
+    //消息发送者-使用exchange
     public void sendMq2(){
         JSONObject paramItem = new JSONObject();
         paramItem.put("ces1",1);
@@ -43,4 +43,12 @@ public class ProducerService {
         rabbitTemplate.convertAndSend("exchange","topic.messages",paramItem.toString());
     }
 
+    //消息发送者-没有使用exchange
+    public void sendMqAckTest(){
+        JSONObject paramItem = new JSONObject();
+        paramItem.put("测试ackKey1",1);
+        paramItem.put("测试ackKey2","2");
+        // 发送mq
+        rabbitTemplate.convertAndSend("ackTestExchange","ack.test",paramItem.toString());
+    }
 }

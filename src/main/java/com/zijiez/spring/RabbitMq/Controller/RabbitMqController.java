@@ -29,4 +29,10 @@ public class RabbitMqController {
     public void assetsSummary2(){
         producerService.sendMq2();
     }
+
+    //应答机制的测试
+    @RequestMapping(value="/sendMqAckTest",method= RequestMethod.GET)
+    public void sendMqAckTest(){
+        producerService.sendMqAckTest();
+    }
 }
