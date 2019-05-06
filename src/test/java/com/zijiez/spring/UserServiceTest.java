@@ -1,8 +1,7 @@
-package com.example.demo;
+package com.zijiez.spring;
 
-import com.zijiez.spring.dto.UserDto;
+import com.zijiez.spring.Builder.BuilderTestService;
 import com.zijiez.spring.service.UserService;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +13,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class UserServiceTest {
     @Autowired
     UserService userService;  //注入UserService
+    @Autowired
+    BuilderTestService builderTestService;
 
     @Test   //加test注解
     public void getUserInfo() {
         //UserDto userDto = userService.getUserInfo();
         //Assert.assertEquals(18,userDto.getAge());
+    }
+
+    @Test
+    public void getTestDtoBuilder(){
+        builderTestService.builderTest();
     }
 }

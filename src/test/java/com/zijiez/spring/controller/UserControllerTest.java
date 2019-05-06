@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.zijiez.spring.controller;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

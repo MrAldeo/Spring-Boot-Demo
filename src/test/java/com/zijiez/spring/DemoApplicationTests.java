@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.zijiez.spring;
 
 import com.zijiez.spring.service.UserService;
 import org.junit.Test;

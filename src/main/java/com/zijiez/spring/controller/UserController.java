@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value="/login",method= RequestMethod.GET)
+    @RequestMapping(value="/user/login",method= RequestMethod.GET)
     public String assetsSummary(){
        return "恭喜，登录成功！";
     }
