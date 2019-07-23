@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class LoginController {
-    @RequestMapping(value="/login",method= RequestMethod.GET)
+    @RequestMapping(value="/login")
     public String assetsSummary(){
-        return "/index";
+        return "index";
     }
 }
