@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>登陆页面</title>
-</head>
+<!--<html xmlns="http://www.w3.org/1999/xhtml"-->
+      <!--xmlns:th="http://www.thymeleaf.org">-->
+<html  xmlns:th="http://www.thymeleaf.org">
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Thymeleaf 语法</title>-->
+<!--</head>-->
 <body>
-
+<form action="#" th:action="@{/login/auth}" th:object="${user}" method="post" th:method="post">
+    First name: <input type="text" th:field="*{userName}"/>
+    Last name: <input type="text" th:field="*{password}"/>
+    <input type="submit" value="Submit" />
+</form>
 </body>
 </html>

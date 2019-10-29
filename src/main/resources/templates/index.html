@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index页面</title>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--引入css-->
+    <link rel="stylesheet" type="text/css" th:href="@{/index.css}" />
+    <title th:text="${pageName}">xx</title>
 </head>
 <body>
-	这个是index页面
+<div class="name_password">我爱你中国，祝福我的祖国70周年繁荣昌盛</div>
+<h1 th:text="${username}">Hello World</h1>
+<h1>获取对象信息</h1>
+<h2>1、通过直接访问对象的方式</h2>
+<p>登陆的用户名：</p>
+<p th:text="${userInfo.userName}"></p>
+<p>登陆的密码：</p>
+<p th:text="${userInfo.password}"></p>
+
+
+<h2>2、通过th:object访问对象的方式</h2>
+<div th:object="${userInfo}">
+    <p>登陆的用户名：</p>
+    <p th:text="*{userName}"></p>
+    <p>登陆的密码:</p>
+    <p th:text="*{password}"></p>
+</div>
+
 </body>
 </html>
