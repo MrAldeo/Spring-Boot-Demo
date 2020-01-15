@@ -23,12 +23,6 @@ public class ExecutorConfig {
      * TODO: 此方法名称为asyncPromiseExecutor，即在spring中注入了一个名字为asyncPromiseExecutor的bean
      * 方法名只要在项目中唯一性，可以适当任意取（最好遵循一定的规则）
      * 使用方法：在需要加入线程池的方法上增加注解@Async("asyncPromiseExecutor")就可以加入此线程池异步执行
-     *
-     * @return
-     * @throws
-     * @author zhaoxi
-     * @time 2018/11/16 14:36
-     * @params
      */
     @Bean("MyThreadLocal")
     public Executor asyncPromiseExecutor() {
