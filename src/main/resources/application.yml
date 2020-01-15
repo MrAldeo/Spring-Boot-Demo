@@ -22,4 +22,17 @@ spring:
 #      prefix: /templates/
 #      suffix: .html
 
+#普通的值（数字，字符串，布尔）
+user_name: zhangsan
+student:
+  user_name: lisi
+  #对象、Map (属性和值) (键值对)
+  address:
+     address1: 河北
+     address2: 北京
+  #数组
+  ages:
+     - 8
+     - 9
+     - 10
 

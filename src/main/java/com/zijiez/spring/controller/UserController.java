@@ -2,8 +2,10 @@ package com.zijiez.spring.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.zijiez.spring.config.StudentConfig;
 import com.zijiez.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,12 +20,21 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    StudentConfig studentConfig;
+    @Autowired
+    private Environment env;
+
     @RequestMapping(value="/user/login")
     public Map assetsSummary() throws InterruptedException {
 //        Thread.sleep(5000);
         Map map = new HashMap();
         map.put("code", 0);
         map.put("msg", "恭喜，登录成功！");
+        System.out.println(studentConfig.getUser_name());
+        System.out.println(studentConfig.getAddress());
+        System.out.println(studentConfig.getAges()[0]);
+        System.out.println(env.getProperty("user_name"));
        return map;
     }
 
